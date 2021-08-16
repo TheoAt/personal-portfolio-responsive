@@ -8,6 +8,9 @@
         <!-- UNICONS -->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
+        <!-- SWIPER CSS -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -63,6 +66,9 @@
                 </div>
 
                 <div class="nav__btns">
+                    <!-- BUTTON DARK / LIGHT MODE -->
+                    <i class="uil uil-moon change__mode" id="mode-button"></i>
+                    
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
@@ -105,7 +111,7 @@
 
                         <div class="home__data">
                             <h1 class="home__title">Bonjour, Je suis Théo !</h1>
-                            <h3 class="home__subtitle">Développeur Frontend Junior</h3>
+                            <h3 class="home__subtitle">Développeur Front-end Junior</h3>
                             <p class="home__description">Passionné par l'informatique et le design ; curieux, motivé et prêt à apprendre et pratiquer</p>
                             <a href="#contact" class="button button__flex">
                                 Me Contacter <i class="uil uil-message button__icon"></i>
@@ -132,7 +138,7 @@
                     <img src="assets/img/photo_about.jpg" alt="photo_profil_theo" class="about__img">
 
                     <div class="about__data">
-                        <p class="about__description">Développeur web et mobile spécialisé Frontend possédant des connaissances sur le design et l'UI / UX</p>
+                        <p class="about__description">Développeur web et mobile spécialisé Front-end possédant des connaissances sur le design et l'UI/UX</p>
 
                         <div class="about__info">
                             <div>
@@ -152,7 +158,7 @@
                         </div>
 
                         <div class="about__buttons">
-                            <a download="" href="assets/pdf/CV_ATLANI_Theo.pdf" class="button button__flex">
+                            <a download="" href="assets/pdf/CV_ATLANI_Theo_v2.pdf" class="button button__flex">
                                 Télécharger mon CV <i class="uil uil-download-alt button__icon"></i>
                             </a>
                         </div>
@@ -166,14 +172,14 @@
                 <span class="section__subtitle">Mon niveau technique</span>
 
                 <div class="skills__container container grid">
-                    <div>
+                    
                         <!-- SKILL 1 -->
                         <div class="skills__content skills__open">
                             <div class="skills__header">
                                 <i class="uil uil-brackets-curly skills__icon"></i>
 
                                 <div>
-                                    <h3 class="skills__title">Frontend</h3>
+                                    <h3 class="skills__title">Front-end</h3>
                                     <span class="skills__subtitle">Plus de 3 ans d'expérience</span>
                                 </div>
 
@@ -229,7 +235,7 @@
                                 <i class="uil uil-server-network skills__icon"></i>
 
                                 <div>
-                                    <h3 class="skills__title">Backend</h3>
+                                    <h3 class="skills__title">Back-end</h3>
                                     <span class="skills__subtitle">Plus de 2 ans d'expérience</span>
                                 </div>
 
@@ -314,11 +320,495 @@
                                 </div>
                             </div>
                         </div>
+                    
+                </div>
+            </section>
+
+            <!-- QUALIFICATIONS -->
+            <section class="qualification section">
+                <h2 class="section__title">Qualifications</h2>
+                <span class="section__subtitle">Mon parcours</span>
+
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button__flex qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            Formation
+                        </div>
+
+                        <div class="qualification__button button__flex" data-target="#work">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            Expérience
+                        </div>
+                    </div>
+
+                    <div class="qualification__sections">
+                        <!--  FIRST QUALIFICATION CONTENT -->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                            <!-- QUALIFICATION 1 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Développeur Web et Mobile</h3>
+                                    <span class="qualification__subtitle">Wild Code School | Orléans</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2020 - 2021
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- QUALIFICATION 2 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Licence MIASHS</h3>
+                                    <span class="qualification__subtitle">Université Grenoble Alpes | Grenoble</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2016 - 2019
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- QUALIFICATION 3 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Baccalauréat Scientifique</h3>
+                                    <span class="qualification__subtitle">Lycée Pablo Neruda | Saint-Martin-d'Hères</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2013 - 2016
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  SECOND QUALIFICATION CONTENT -->
+                        <div class="qualification__content" data-content id="work">
+                            <!-- QUALIFICATION 1 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Projets personnels</h3>
+                                    <span class="qualification__subtitle">Web & Design | Orléans - Grenoble</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        Février 2021 - Juin 2021
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- QUALIFICATION 2 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Développeur Junior</h3>
+                                    <span class="qualification__subtitle">FEDMIND | Orléans</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        Février 2021 - Juin 2021
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- QUALIFICATION 3 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Projets encadrés</h3>
+                                    <span class="qualification__subtitle">Wild Code School | Orléans</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2020 - 2021
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- QUALIFICATION 4 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Vendeur - Conseiller</h3>
+                                    <span class="qualification__subtitle">LDLC | Grenoble</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                       2019 - 2020
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <!-- SERVICES -->
+            <section class="services section" id="services">
+                <h2 class="section__title">Services</h2>
+                <span class="section__subtitle">Ce que je peux réaliser</span>
+
+                <div class="services__container container grid">
+                    <!-- SERVICE 1 -->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-pen services__icon"></i>
+                            <h3 class="services__title">Design</h3>
+                        </div>
+
+                        <span class="button button__flex button__small button__link services__button">
+                            En savoir plus
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Design</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Designer une interface utilisateur</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Créer la maquette graphique d'un site et/ou d'une application</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Retoucher/Créer des éléments via Photoshop</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICE 2 -->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-arrow services__icon"></i>
+                            <h3 class="services__title">Front-end</h3>
+                        </div>
+
+                        <span class="button button__flex button__small button__link services__button">
+                            En savoir plus
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Front-end</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Développer une interface utilisateur web statique et adaptable</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Développer une interface utilisateur web dynamique</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Développer une interface utilisateur avec une solution de gestion de contenu</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICE 3 -->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-arrow services__icon"></i>
+                            <h3 class="services__title">Back-end</h3>
+                        </div>
+
+                        <span class="button button__flex button__small button__link services__button">
+                            En savoir plus
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Back-end</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Créer une base de données</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Développer des composants d'accès aux données</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Développer la partie back-end d'une application et/ou d'un site</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Elaborer des composants dans une application de gestion de contenu</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PORTFOLIO -->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title">Portfolio</h2>
+                <span class="section__subtitle">Mes différents projets</span>
+
+                <div class="portfolio__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- TEMPLATE PROJECT -->
+                        <!-- <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/" alt="photo_projet_" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">TITLE</h3>
+                                <p class="portfolio__description">DESCRIPTION</p>
+                                <a href="#" target="_blank" class="button button__flex button__small portfolio__button">
+                                    Code
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div> -->
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/fedmind_new_website.png" alt="photo_projet_fedmind_website" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">FEDMIND</h3>
+                                <p class="portfolio__description">Refonte graphique complète du site web de FEDMIND, d'abord faite sur Figma puis sur Wordpress via le thème builder Divi.</p>
+                                <a href="https://www.dev-fedmind.com/" target="_blank" class="button button__flex button__small portfolio__button">
+                                    Site
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/feddiag_web.png" alt="photo_projet_feddiag" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">FedDiag'</h3>
+                                <p class="portfolio__description">Réalisation d'un annuaire de tests pré-médicaux sur l'obésité, la motivation et les troubles alimentaires avec génération automatique de pdf comprenant les résultats du test. Réalisé en React et Node JS.</p>
+                                <a href="https://gitlab.com/Fedmind/feddiag-yfas/-/tree/master" target="_blank" class="button button__flex button__small portfolio__button">
+                                    Code
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/sos_craquage.png" alt="photo_projet_sos_craquage" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">SOS CRAQUAGE</h3>
+                                <p class="portfolio__description">Réalisation d'un chatbot médical destiné aux personnes souffrant d'obésité et permettant de désamorcer les crises liées aux troubles du comportement alimentaire. Disponible sur Internet, Play Store et Apple Store.</p>
+                                <a href="https://www.soscraquage.com/" target="_blank" class="button button__flex button__small portfolio__button">
+                                    Site
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio_desktop.png" alt="photo_projet_portfolio" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Premier portfolio</h3>
+                                <p class="portfolio__description">Première version d'un portfolio réalisé en moins de deux jours dans le cadre de ma formation. Développé en React, Express JS, Node JS et SQL.</p>
+                                <a href="https://github.com/TheoAt/checkpoint-4-portfolio-front" target="_blank" class="button button__flex button__small portfolio__button">
+                                    Code
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/cjftennis.png" alt="photo_projet_cjf_tennis" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">CJF Tennis</h3>
+                                <p class="portfolio__description">Développé lors du troisième et dernier projet de ma formation, le représentant du CJF Tennis nous a demandé de refaire le site web de l'association. Développé en React, Express JS, Node JS et SQL.</p>
+                                <a href="http://cjftennis.com/" target="_blank" class="button button__flex button__small portfolio__button">
+                                    Site
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/wild_code_bar.png" alt="photo_projet_wild_code_bar" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Wild Code Bar</h3>
+                                <p class="portfolio__description">Deuxième projet de ma formation : le Wild Code Bar, bar secret et luxieux accessible uniquement via des ID spécifiques. Développé en React et Node JS, utilisation d'une API hébergée via Heroku.</p>
+                                <a href="https://github.com/TheoAt/orleans-js-0920-p2-secret-bar" target="_blank" class="button button__flex button__small portfolio__button">
+                                    Code
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add arrows swiper -->
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+
+                    <!-- Add pagination swiper -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- PROJECT CONTACT -->
+            <section class="project section">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">Vous avez un projet ou vous êtes intéréssé(e) par mon profil ?</h2>
+                            <p class="project__description">N'hésitez pas à me contacter afin d'en discuter et échanger !</p>
+                            <a href="#contact" class="button button__flex button__white">
+                                Contactez moi
+                                <i class="uil uil-message project__icon button__icon__white"></i>
+                            </a>
+                        </div>
+                        <img src="assets/img/contact_project.gif" alt="gif_contact" class="project__img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT ME -->
+            <section class="contact section" id="contact">
+                <h2 class="section__title">Contact</h2>
+                <span class="section__subtitle">Prenez contact avec moi</span>
+
+                <div class="contact__container grid">
+                    
+                        <div class="contact__information">
+                            <i class="uil uil-phone contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Portable</h3>
+                                <span class="contact__subtitle">07 89 03 43 03</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <a href="mailto:theo.atlani@gmail.com" class="contact__subtitle">theo.atlani@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Localisation</h3>
+                                <span class="contact__subtitle">France - Grenoble</span>
+                            </div>
+                        </div>
+                    
+                </>
+            </section>
         </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h2 class="footer__title">TheoAt</h2>
+                        <span class="footer__subtitle">Développeur front-end</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#services" class="footer__link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="footer__link">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://www.linkedin.com/in/theo-atlani/" target="_blank" class="footer__social">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+
+                        <a href="https://github.com/TheoAt" target="_blank" class="footer__social">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/theo_mw/" target="_blank" class="footer__social">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; TheoAt. All right reserved</p>
+            </div>
+        </footer>
+
+        <!-- SCROLL TOP -->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+
+        <!-- SWIPER JS -->
+        <script src="assets/js/swiper-bundle.min.js"></script>
 
         <!-- MAIN SCRIPT -->
         <script src="assets/js/main.js"></script>

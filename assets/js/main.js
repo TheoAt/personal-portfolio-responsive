@@ -46,3 +46,134 @@ function toggleSkills() {
 }
 
 skillsHeader.forEach(skill => skill.addEventListener('click', toggleSkills))
+
+
+/*========== QUALIFICATION TABS ==========*/
+const tabs = document.querySelectorAll('[data-target]')
+const tabContents = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target)
+
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('qualification__active')
+        })
+        target.classList.add('qualification__active')
+
+        tabs.forEach(tab => {
+            tab.classList.remove('qualification__active')
+        })
+        tab.classList.add('qualification__active')
+    })
+})
+
+
+/*========== SERVICES MODAL ==========*/
+const modalViews = document.querySelectorAll('.services__modal')
+const modalBtns = document.querySelectorAll('.services__button')
+const modalCloses = document.querySelectorAll('.services__modal-close')
+
+let modal = (modalClick) => {
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () => {
+        modal(i)
+    })
+})
+
+modalCloses.forEach(modalClose => {
+    modalClose.addEventListener('click', () => {
+        modalViews.forEach(modalView => {
+            modalView.classList.remove('active-modal')
+        })
+    })
+})
+
+
+/*========== PORTFOLIO SWIPER ==========*/
+let swiper = new Swiper('.portfolio__container', {
+    cssMode: true,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    }
+})
+
+
+/*========== ACTIVE LINK SCROLL ==========*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive() {
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active__link')
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active__link')
+        }
+    })
+}
+
+window.addEventListener('scroll', scrollActive)
+
+
+/*========== ADD SHADOW SCROLL ==========*/
+function scrollHeader() {
+    const nav = document.getElementById('header')
+    if(this.scrollY >= 80)
+        nav.classList.add('scroll__header')
+    else
+        nav.classList.remove('scroll__header')
+}
+
+window.addEventListener('scroll', scrollHeader)
+
+
+/*========== SHOW SCROLL UP ==========*/
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up')
+    if(this.scrollY >= 560)
+        scrollUp.classList.add('show__scroll')
+    else
+        scrollUp.classList.remove('show__scroll')
+}
+
+window.addEventListener('scroll', scrollUp)
+
+
+/*========== DARK / LIGHT MODE ==========*/
+const modeButton = document.getElementById('mode-button')
+const darkMode = 'dark-mode'
+const iconMode = 'uil-sun'
+
+const selectedMode = localStorage.getItem('selected-mode')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+const getCurrentMode = () => document.body.classList.contains(darkMode) ? 'dark' : 'light'
+const getCurrentIcon = () => modeButton.classList.contains(iconMode) ? 'uil-moon' : 'uil-sun'
+
+if(selectedMode) {
+    document.body.classList[selectedMode === 'dark' ? 'add' : 'remove'](darkMode)
+    modeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconMode)
+}
+
+modeButton.addEventListener('click', () => {
+    document.body.classList.toggle(darkMode)
+    modeButton.classList.toggle(iconMode)
+
+    localStorage.setItem('selected-mode', getCurrentMode())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})

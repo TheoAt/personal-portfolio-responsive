@@ -1,13 +1,12 @@
 /*======== GOOGLE FONTS ========*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 /*======== VARIABLES CSS ========*/
+
 :root {
     --header-height: 3rem;
-
     /* COLORS */
     --hue-color: 220;
-
     /* HSL COLOR MODE */
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
@@ -19,10 +18,8 @@
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #f6f6f6;
-
     /* FONT & TYPO */
     --body-font: 'Poppins', sans-serif;
-
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -30,10 +27,8 @@
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
-
     --font-medium: 500;
     --font-semi-bold: 600;
-
     /* MARGIN BOTTOM */
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
@@ -43,7 +38,6 @@
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
-
     /* Z-INDEX */
     --z-tooltip: 10;
     --z-fixed: 100;
@@ -51,6 +45,7 @@
 }
 
 /*======== FONT SIZE FOR LARGE DEVICES ========*/
+
 @media screen and (min-width: 968px) {
     :root {
         --big-font-size: 3rem;
@@ -64,6 +59,7 @@
 }
 
 /*======== BASE ========*/
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -101,6 +97,7 @@ img {
 }
 
 /*======== COMMON CSS CLASSES ========*/
+
 .section {
     padding: 2rem 0 4rem;
 }
@@ -120,6 +117,7 @@ img {
 }
 
 /*======== LAYOUT ========*/
+
 .container {
     max-width: 768px;
     margin-left: var(--mb-1-5);
@@ -141,6 +139,7 @@ img {
 }
 
 /*======== NAVIGATION ========*/
+
 .nav {
     max-width: 968px;
     height: var(--header-height);
@@ -216,11 +215,13 @@ img {
 }
 
 /*======== DISPLAY MENU ========*/
+
 .show-menu {
     bottom: 0;
 }
 
 /*======== HOME SECTION ========*/
+
 .home__container {
     gap: 1rem;
     margin-top: -20%;
@@ -304,6 +305,7 @@ img {
 }
 
 /*======== BUTTONS ========*/
+
 .button {
     display: inline-block;
     background-color: var(--first-color);
@@ -318,10 +320,24 @@ img {
     background-color: var(--first-color-alt);
 }
 
-.button__icon {
+.button__white {
+    background-color: var(--container-color);
+    color: var(--first-color);
+    transition: .2s;
+}
+
+.button__icon, .button__icon__white {
     font-size: 1.25rem;
     margin-left: var(--mb-0-5);
+}
+
+.button__icon {
     transition: .2s;
+}
+
+.button__white:hover {
+    background-color: var(--first-color);
+    color: var(--container-color);
 }
 
 .button__flex {
@@ -345,6 +361,7 @@ img {
 }
 
 /*======== ABOUT ========*/
+
 .about__img {
     width: 200px;
     border-radius: .5rem;
@@ -384,6 +401,7 @@ img {
 }
 
 /*======== SKILLS ========*/
+
 .skills__container {
     row-gap: 0;
 }
@@ -504,6 +522,7 @@ img {
 }
 
 /*======== QUALIFICATION ========*/
+
 .qualification__tabs {
     display: flex;
     justify-content: space-evenly;
@@ -579,6 +598,7 @@ img {
 }
 
 /*======== SERVICES ========*/
+
 .services__container {
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
@@ -615,7 +635,7 @@ img {
     font-size: var(--small-font-size);
 }
 
-.services__button:hover .button__icon{
+.services__button:hover .button__icon {
     transform: translateX(.25rem);
 }
 
@@ -672,12 +692,14 @@ img {
 }
 
 /* ACTIVE MODAL */
+
 .active-modal {
     opacity: 1;
     visibility: visible;
 }
 
 /*======== PORTFOLIO ========*/
+
 .portfolio__container {
     overflow: initial;
 }
@@ -722,7 +744,7 @@ img {
     right: -.5rem;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-container-horizontal>.swiper-pagination-bullets {
     bottom: -2.5rem;
 }
 
@@ -732,4 +754,64 @@ img {
 
 .swiper-button-prev, .swiper-button-next, .swiper-pagination-bullets {
     outline: none;
+}
+
+/*======== PROJECT CONTACT ========*/
+
+.project {
+    text-align: center;
+}
+
+.project__bg {
+    background-color: var(--first-color-second);
+    padding-top: 3rem;
+}
+
+.project__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.project__description {
+    margin-bottom: var(--mb-1-5);
+}
+
+.project__title, .project__description {
+    color: var(--container-color);
+}
+
+.project__img {
+    width: 232px;
+    justify-self: center;
+}
+
+/*======== CONTACT ========*/
+.contact__container {
+    row-gap: 3rem;
+}
+
+.contact__information {
+    display: flex;
+    margin-bottom: var(--mb-2);
+}
+
+.contact__icon {
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+    margin-left: var(--mb-1-5);
+}
+
+.contact__title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.contact__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.contact__content {
+    
 }

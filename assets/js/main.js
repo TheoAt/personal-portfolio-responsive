@@ -106,3 +106,74 @@ let swiper = new Swiper('.portfolio__container', {
         clickable: true,
     }
 })
+
+
+/*========== ACTIVE LINK SCROLL ==========*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive() {
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active__link')
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active__link')
+        }
+    })
+}
+
+window.addEventListener('scroll', scrollActive)
+
+
+/*========== ADD SHADOW SCROLL ==========*/
+function scrollHeader() {
+    const nav = document.getElementById('header')
+    if(this.scrollY >= 80)
+        nav.classList.add('scroll__header')
+    else
+        nav.classList.remove('scroll__header')
+}
+
+window.addEventListener('scroll', scrollHeader)
+
+
+/*========== SHOW SCROLL UP ==========*/
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up')
+    if(this.scrollY >= 560)
+        scrollUp.classList.add('show__scroll')
+    else
+        scrollUp.classList.remove('show__scroll')
+}
+
+window.addEventListener('scroll', scrollUp)
+
+
+/*========== DARK / LIGHT MODE ==========*/
+const modeButton = document.getElementById('mode-button')
+const darkMode = 'dark-mode'
+const iconMode = 'uil-sun'
+
+const selectedMode = localStorage.getItem('selected-mode')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+const getCurrentMode = () => document.body.classList.contains(darkMode) ? 'dark' : 'light'
+const getCurrentIcon = () => modeButton.classList.contains(iconMode) ? 'uil-moon' : 'uil-sun'
+
+if(selectedMode) {
+    document.body.classList[selectedMode === 'dark' ? 'add' : 'remove'](darkMode)
+    modeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconMode)
+}
+
+modeButton.addEventListener('click', () => {
+    document.body.classList.toggle(darkMode)
+    modeButton.classList.toggle(iconMode)
+
+    localStorage.setItem('selected-mode', getCurrentMode())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
